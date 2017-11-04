@@ -140,4 +140,3 @@ def discriminator(image, reuse=False):
 
       return conv_5
 
-   """test git push"""
