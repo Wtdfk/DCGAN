@@ -9,7 +9,7 @@ def save_images(src, data):
   """
 
   :param src: like ./test.jpg
-  :param data: shape(64,64,64,3)
+  :param data: shape: (64,64,64,3)
   :return:
   """
   img = np.zeros((64 * 8, 64 * 8, 3))
@@ -24,9 +24,9 @@ def save_images(src, data):
 
 def load_images_src(src):
   """
-  get all pictures' src,must be jpg
+  get all the pictures of src (format must be jpg)
   :param src: the pictures' resource
-  :return: return a List which is filled of all pictures' src
+  :return: return a List filled with all the pictures of src.
   """
 
   data = glob(os.path.join(src, '*.jpg'))
@@ -35,9 +35,9 @@ def load_images_src(src):
 
 def get_image(src):
   """
-  transform the image from int(0-255) to double(-1,1)
+  transform the image from int(0-255) to double(-1,1).
   :param src: the picture's resource
-  :return: the np.float array, shape(64*64)
+  :return: the np. float array, shape: (64*64).
   """
   return misc.imread(src).astype(np.float32) / 127.5 - 1
 
@@ -46,8 +46,8 @@ def save_images(src, data):
   """
   transform the 8 images' data to a big image.
   :param src: the images' resource
-  :param data:the 64 images array [64,64,63,3]
-  :return: the big image which is consisted of 8 images
+  :param data:the 64 images array: [64,64,63,3].
+  :return: the big image consists of 8 images.
   """
   img = np.zeros((64 * 8, 64 * 8, 3))
 
@@ -63,7 +63,7 @@ def read_and_decode(filename_queue):
   """
   read the data of recorders, and decode it.
   :param filename_queue:the recorders's resource
-  :return:the data(type:tf.float scope:[-1,1])
+  :return:the data(type:tf.float scope: [-1,1])
   """
   filename_queue = tf.train.string_input_producer([filename_queue])
 
