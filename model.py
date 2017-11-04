@@ -139,3 +139,5 @@ def discriminator(image, reuse=False):
       conv_5 = tf.matmul(conv_5, w5) + b5
 
       return conv_5
+
+   """test git push"""
