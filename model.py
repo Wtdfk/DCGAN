@@ -13,9 +13,9 @@ def generator_model(random_number):
   deconvolute_layer3      64*16*16*256 -> 64*32*32*128
   deconvolute_layer4      64*32*32*128 -> 64*64*64*3
 
-  :param random_number: the random number and shape: [64,100].
+  :param random_number: the random number's shape: [64,100].
 
-  :return: the number and shape: [64,64,64,3],
+  :return: the number's shape: [64,64,64,3],
   it is on behalf of 64 pictures which size is: 64*64*3.
   """
   with tf.variable_scope('generator_model'):
@@ -85,7 +85,7 @@ def discriminator(image, reuse=False):
 
   :param image: 64 pictures which size is: 64*64*3
 
-  :return:the number and shape: [64,64].
+  :return:the number's shape: [64,64].
   """
   with tf.variable_scope('discriminator') as scope:
     if reuse:

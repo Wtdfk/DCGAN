@@ -46,7 +46,7 @@ def save_images(src, data):
   """
   transform the 8 images' data to a big image.
   :param src: the images' resource
-  :param data:the 64 images array: [64,64,63,3].
+  :param data:the 64 images array: [64,64,64,3].
   :return: the big image consists of 8 images.
   """
   img = np.zeros((64 * 8, 64 * 8, 3))
